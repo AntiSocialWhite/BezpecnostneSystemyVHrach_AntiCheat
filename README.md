@@ -1,0 +1,1 @@
+Simple usermode anticheat without kernel drivers. Its a mix of behavioral analysis patterns, main module controls communication, dll heartbeat, injected input, virtual machine checks (unfinished right now), etc.
