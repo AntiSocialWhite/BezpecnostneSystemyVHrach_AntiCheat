@@ -1,0 +1,12 @@
+G:\AntiCheat\Ring3AC\ac_shared.cpp;G:\AntiCheat\CSGOModule\Release\ac_shared.obj
+G:\AntiCheat\CSGOModule\ACFunctions.cpp;G:\AntiCheat\CSGOModule\Release\ACFunctions.obj
+G:\AntiCheat\CSGOModule\crc.cpp;G:\AntiCheat\CSGOModule\Release\crc.obj
+G:\AntiCheat\CSGOModule\DllMain.cpp;G:\AntiCheat\CSGOModule\Release\DllMain.obj
+G:\AntiCheat\CSGOModule\Hooks.cpp;G:\AntiCheat\CSGOModule\Release\Hooks.obj
+G:\AntiCheat\CSGOModule\minhook\buffer.c;G:\AntiCheat\CSGOModule\Release\buffer.obj
+G:\AntiCheat\CSGOModule\minhook\hde\hde32.c;G:\AntiCheat\CSGOModule\Release\hde32.obj
+G:\AntiCheat\CSGOModule\minhook\hde\hde64.c;G:\AntiCheat\CSGOModule\Release\hde64.obj
+G:\AntiCheat\CSGOModule\minhook\hook.c;G:\AntiCheat\CSGOModule\Release\hook.obj
+G:\AntiCheat\CSGOModule\minhook\trampoline.c;G:\AntiCheat\CSGOModule\Release\trampoline.obj
+G:\AntiCheat\CSGOModule\Netvars.cpp;G:\AntiCheat\CSGOModule\Release\Netvars.obj
+G:\AntiCheat\CSGOModule\vec3d.cpp;G:\AntiCheat\CSGOModule\Release\vec3d.obj
