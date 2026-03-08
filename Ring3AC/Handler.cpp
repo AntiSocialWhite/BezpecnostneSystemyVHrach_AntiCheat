@@ -289,6 +289,14 @@ void Handler::cheat_hndl() {
         std::cout << "banned   = " << banned << "\n";
 #endif
 
+#ifndef _DEBUG
+        if (anti_debug::IsAnyDebuggerPresent())
+        {
+            std::cout << "Quit reason: Debugger present\n";
+            info.should_quit_game = true;
+        }
+#endif
+
         if (!dllAlive) {
             std::cout << "Quit reason: DLL not alive\n";
             info.should_quit_game = true;
@@ -302,6 +310,7 @@ void Handler::cheat_hndl() {
         if (info.injected_input_detection)
         {
             if (info.injected_input_detection >= 5) {
+                std::cout << "Quit reason: Injected input detected\n";
                 info.should_quit_game = true;
             }
         }

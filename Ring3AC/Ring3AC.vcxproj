@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClCompile Include="ac_shared.cpp" />
     <ClCompile Include="AntiVM.cpp" />
+    <ClCompile Include="anti_debug.cpp" />
     <ClCompile Include="Handler.cpp" />
     <ClCompile Include="InjectedInput.cpp" />
     <ClCompile Include="ModuleInjection.cpp" />

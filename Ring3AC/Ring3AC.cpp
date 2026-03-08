@@ -82,13 +82,31 @@ std::map <std::string, DWORD> get_running_processes()
     return result;
 }
 
-bool check_cheatengine(std::string process)
+static const std::vector<std::string> suspicious_processes =
 {
-    std::string search_keys[5] = { "cheat", "hacker", "Cheat", "Hacker", "ProcessHacker"};
+    "cheatengine",
+    "processhacker",
+    "x64dbg",
+    "x32dbg",
+    "ida",
+    "ollydbg",
+    "ghidra",
+    "wireshark",
+    "scylla",
+    "fiddler",
+    "tcpview"
+};
 
-    for(auto search_key : search_keys)
-    if (process.find(search_key) != std::string::npos)
-        return true;
+bool check_suspicious_process(const std::string& process)
+{
+    std::string lower = process;
+    std::transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
+
+    for (const auto& name : suspicious_processes)
+    {
+        if (lower.find(name) != std::string::npos)
+            return true;
+    }
 
     return false;
 }
@@ -100,9 +118,10 @@ void process_check() {
         auto processes = get_running_processes();
 
         for (auto name_id : processes) {
-           //std::cout << name_id.first << "\n";
-            if (check_cheatengine(name_id.first))
+            if (check_suspicious_process(name_id.first)) {
+                std::cout << "Quit reason: Process check\n";
                 info.should_quit_game = true; // cheatengine - quit game
+            }
         }
 
         std::this_thread::sleep_for(std::chrono::seconds(1));

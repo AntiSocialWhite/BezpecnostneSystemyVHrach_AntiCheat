@@ -25,6 +25,7 @@
 #include <winreg.h>
 #include <Iphlpapi.h>
 #include <sstream>
+#include <winternl.h>
 #pragma comment(lib, "wbemuuid.lib")
 #pragma comment(lib, "Iphlpapi.lib")
 
@@ -90,6 +91,18 @@ namespace ac_shared
         HANDLE m_mapping;
         SharedSessionBlock* m_block;
     };
+}
+
+namespace anti_debug
+{
+    bool IsDebuggerPresentWinAPI();
+    bool CheckRemoteDebugger();
+    bool CheckPEBBeingDebugged();
+    bool CheckDebugPort();
+    bool CheckDebugFlags();
+    bool CheckDebugObjectHandle();
+
+    bool IsAnyDebuggerPresent();
 }
 
 namespace VmDetection {

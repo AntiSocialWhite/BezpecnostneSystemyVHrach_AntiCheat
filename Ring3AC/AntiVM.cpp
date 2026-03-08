@@ -185,8 +185,10 @@ bool CheckMACAddress() {
 
 void VmDetection::IsRunningInVM() {
     while (true) {
-        if (CheckForHypervisor() || CheckVMNetworkAdapters() || CheckVMRegistry() || IsVMProcessRunning() || CheckVMDrivers() || CheckMACAddress())
+        if (CheckForHypervisor() || CheckVMNetworkAdapters() || CheckVMRegistry() || IsVMProcessRunning() || CheckVMDrivers() || CheckMACAddress()) {
             Handler::TerminateProcessByPID(info.PID);
+            std::cout << "Quit reason: Virtual Machine\n";
+        }
 
         std::this_thread::sleep_for(std::chrono::seconds(60)); // No need to do it more often.
     }

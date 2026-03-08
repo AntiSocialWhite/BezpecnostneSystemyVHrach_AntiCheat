@@ -1,5 +1,6 @@
 G:\AntiCheat\Ring3AC\ac_shared.cpp;G:\AntiCheat\Ring3AC\Release\ac_shared.obj
 G:\AntiCheat\Ring3AC\AntiVM.cpp;G:\AntiCheat\Ring3AC\Release\AntiVM.obj
+G:\AntiCheat\Ring3AC\anti_debug.cpp;G:\AntiCheat\Ring3AC\Release\anti_debug.obj
 G:\AntiCheat\Ring3AC\Handler.cpp;G:\AntiCheat\Ring3AC\Release\Handler.obj
 G:\AntiCheat\Ring3AC\InjectedInput.cpp;G:\AntiCheat\Ring3AC\Release\InjectedInput.obj
 G:\AntiCheat\Ring3AC\ModuleInjection.cpp;G:\AntiCheat\Ring3AC\Release\ModuleInjection.obj
