@@ -128,13 +128,13 @@ int main(int argc, char** argv)
     if (info.PID != 0) {
         StartGameSession(info.PID);
         std::thread cheats_handler(Handler::cheat_hndl);
-        //std::thread vm_handle(VmDetection::IsRunningInVM);
-        //std::thread sendinput_thread(SInput::run_sendinput_check);
-        //std::thread process_thread(process_check);
-        //process_thread.join();
-        //sendinput_thread.join();        
+        std::thread vm_handle(VmDetection::IsRunningInVM);
+        std::thread sendinput_thread(SInput::run_sendinput_check);
+        std::thread process_thread(process_check);
+        process_thread.join();
+        sendinput_thread.join();        
         cheats_handler.join();
-        //vm_handle.join();
+        vm_handle.join();
     }
 
     return 0;
